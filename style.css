@@ -1,0 +1,15 @@
+.Photos {display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    gap: 50px;
+}
+
+.Overlapping-text {
+    position: absolute;
+    top:420px;
+    left:50px;
+    z-index: 1;
+    background-color: rgba (255, 255, 255);
+    padding: 10px;
+}
