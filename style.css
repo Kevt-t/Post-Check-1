@@ -17,7 +17,7 @@ figure {
     background: white;
     padding: 10px 10px 10px; 
     box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2);
-    text-align: center;/
+    text-align: center;
 }
 
 figure img {
@@ -55,6 +55,13 @@ figcaption {
     color: #8d6309;
     margin: 0;
 }
+
+/* .header,.lo go, & .site_title pertain to their exact definition*/
+.links {
+    text-align: center;
+}
+
+/* I need help centering my links*/
 
 
 
