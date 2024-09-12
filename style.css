@@ -1,15 +1,63 @@
-.Photos {display: flex;
+.Photos {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    position: relative;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 60vh;
     gap: 50px;
+    margin-bottom: 3px
 }
 
-.Overlapping-text {
-    position: absolute;
-    top:420px;
-    left:50px;
-    z-index: 1;
-    background-color: rgba (255, 255, 255);
-    padding: 10px;
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio, fill space */
+    max-width: 350px;
+    max-height: 350px;
+}
+/* Makes the */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 3px solid #ddd;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.site-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #8d6309;
+    margin: 0;
+}
+
+
+
+
+
+
+figure {
+    text-align: center; /* Centers the content within the figure */
+    margin: 0; /* Removes default margins */
+}
+
+figcaption {
+    font-size: 16px; /* Adjusts the font size */
+    font-family: 'Arial', sans-serif; /* Changes the font, you can choose any web-safe font */
+    color: #333; /* Changes the text color */
+    margin-top: 8px; /* Adds space between the image and caption */
+}
+
+.Title {
+    justify-content: center;
+    align-items: center
+
 }
