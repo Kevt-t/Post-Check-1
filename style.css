@@ -9,14 +9,15 @@
     margin-bottom: 3px
 }
 
+/* Changes mostly the Polaroid Effect*/
 figure {
     width: 350px;
-    height: 450px; /* Increase height to accommodate Polaroid effect */
-    margin: 0; /* Optional: removes default figure margin */
-    background: white; /* Polaroid background */
-    padding: 10px 10px 10px; /* Extra bottom padding for caption space */
-    box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2); /* Add shadow for Polaroid effect */
-    text-align: center; /* Center align caption text */
+    height: 450px; 
+    margin: 0;
+    background: white;
+    padding: 10px 10px 10px; 
+    box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;/
 }
 
 figure img {
@@ -27,7 +28,7 @@ figure img {
 }
 
 figcaption {
-    margin-top: 10px; /* Space between image and caption */
+    margin-top: 10px;
     font-family: 'Courier New', monospace;
     font-size: 14px; 
     color: #333; 
