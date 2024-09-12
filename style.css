@@ -4,23 +4,36 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 80vh;
     gap: 50px;
     margin-bottom: 3px
 }
 
 figure {
     width: 350px;
-    height: 350px;
+    height: 450px; /* Increase height to accommodate Polaroid effect */
     margin: 0; /* Optional: removes default figure margin */
+    background: white; /* Polaroid background */
+    padding: 10px 10px 10px; /* Extra bottom padding for caption space */
+    box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2); /* Add shadow for Polaroid effect */
+    text-align: center; /* Center align caption text */
 }
 
 figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio while filling the 350x350 space */
+    width: 350px;
+    height: 350px; 
+    object-fit:cover; /* Maintain aspect ratio while filling */
+    border-bottom: 10px solid white; /* Adds space between the image and the caption */
 }
 
+figcaption {
+    margin-top: 10px; /* Space between image and caption */
+    font-family: 'Courier New', monospace;
+    font-size: 14px; 
+    color: #333; 
+}
+
+/* .header,.lo go, & .site_title pertain to their exact definition*/
 .header {
     display: flex;
     align-items: center;
