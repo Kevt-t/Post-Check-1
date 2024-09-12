@@ -1,5 +1,4 @@
 .Photos {
-    align-items: stretch;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -10,14 +9,18 @@
     margin-bottom: 3px
 }
 
+figure {
+    width: 350px;
+    height: 350px;
+    margin: 0; /* Optional: removes default figure margin */
+}
+
 figure img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio, fill space */
-    max-width: 350px;
-    max-height: 350px;
+    object-fit: cover; /* Maintain aspect ratio while filling the 350x350 space */
 }
-/* Makes the */
+
 .header {
     display: flex;
     align-items: center;
@@ -44,20 +47,3 @@ figure img {
 
 
 
-figure {
-    text-align: center; /* Centers the content within the figure */
-    margin: 0; /* Removes default margins */
-}
-
-figcaption {
-    font-size: 16px; /* Adjusts the font size */
-    font-family: 'Arial', sans-serif; /* Changes the font, you can choose any web-safe font */
-    color: #333; /* Changes the text color */
-    margin-top: 8px; /* Adds space between the image and caption */
-}
-
-.Title {
-    justify-content: center;
-    align-items: center
-
-}
