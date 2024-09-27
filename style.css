@@ -1,4 +1,3 @@
-/* Styles for the container holding all photos */
 .Photos {
     display: flex;
     flex-direction: row;
@@ -7,44 +6,35 @@
     align-items: center;
     height: 80vh;
     gap: 50px;
-    margin-bottom: 3px;
+    margin-bottom: 3px
 }
 
-/* Styles for each figure (Polaroid) */
+/* Changes mostly the Polaroid Effect*/
 figure {
     width: 350px;
-    height: 450px;
+    height: 450px; 
     margin: 0;
     background: white;
-    padding: 10px 10px 10px;
+    padding: 10px 10px 10px; 
     box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
-/* Hover effect for the entire Polaroid */
-figure:hover {
-    transform: scale(1.1); /* Scale up the Polaroid on hover */
-    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-}
-
-/* Styles for images inside the figures */
 figure img {
     width: 350px;
-    height: 350px;
-    object-fit: cover; 
-    border-bottom: 10px solid white; /* Space between the image and caption */
+    height: 350px; 
+    object-fit:cover; /* Maintain aspect ratio while filling */
+    border-bottom: 10px solid white; /* Adds space between the image and the caption */
 }
 
-/* Styles for captions */
 figcaption {
     margin-top: 10px;
     font-family: 'Courier New', monospace;
-    font-size: 14px;
-    color: #333;
+    font-size: 14px; 
+    color: #333; 
 }
 
-/* Styles for the header containing the logo and title */
+/* .header,.lo go, & .site_title pertain to their exact definition*/
 .header {
     display: flex;
     align-items: center;
@@ -53,14 +43,12 @@ figcaption {
     border-bottom: 3px solid #ddd;
 }
 
-/* Styles for the logo image */
 .logo {
     width: 50px;
     height: auto;
     margin-right: 15px;
 }
 
-/* Styles for the site title */
 .site-title {
     font-size: 2em;
     font-weight: bold;
@@ -68,8 +56,15 @@ figcaption {
     margin: 0;
 }
 
-
-
+/* .header,.lo go, & .site_title pertain to their exact definition*/
 .links {
     text-align: center;
 }
+
+/* I need help centering my links*/
+
+
+
+
+
+
