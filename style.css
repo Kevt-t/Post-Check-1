@@ -8,6 +8,7 @@
     height: 80vh;
     gap: 50px;
     margin-bottom: 3px;
+    transition: all 0.5s ease; /* Add a smooth transition to the container */
 }
 
 /* Styles for each figure (Polaroid) */
@@ -19,7 +20,7 @@ figure {
     padding: 10px 10px 10px;
     box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, all 0.5s ease; /* Smooth transition for position changes */
 }
 
 /* Hover effect for the entire Polaroid */
@@ -29,11 +30,12 @@ figure:hover {
 }
 
 /* Styles for images inside the figures */
-figure img {
+figure img{
     width: 350px;
     height: 350px;
     object-fit: cover; 
     border-bottom: 10px solid white; /* Space between the image and caption */
+    
 }
 
 /* Styles for captions */
@@ -72,4 +74,114 @@ figcaption {
 
 .links {
     text-align: center;
+}
+
+.like-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0; /* Icon is hidden by default */
+    pointer-events: none; /* Icon is uninteractable by default */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the entire Polaroid */
+figure:hover .like-icon {
+    opacity: 1; /* Icon becomes visible when the figure is hovered */
+    pointer-events: auto; /* Icon becomes interactable when visible */
+    transform: scale(1); /* Reset scale if it was changed before */
+}
+
+/* Additional hover effect for the icon itself when visible */
+figure:hover .like-icon:hover {
+    transform: scale(1.2); /* Enhanced scaling on hover when visible */
+}
+
+/* Styles for the feedback form */
+.feedback-form {
+    display: none;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.feedback-form select {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.feedback-form textarea {
+    padding: 10px;
+    height: 100px;
+}
+
+.feedback-form button {
+    padding: 10px 20px;
+    background-color: #8d6309;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #6c4c07;
+}
+
+/* Styles for the hide icon (eye icon) */
+.hide-icon {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0; /* Icon is hidden by default */
+    pointer-events: none; /* Icon is uninteractable by default */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Display the hide icon when hovering over the figure */
+figure:hover .hide-icon {
+    opacity: 1; /* Icon becomes visible when the figure is hovered */
+    pointer-events: auto; /* Icon becomes interactable when visible */
+    transform: scale(1); /* Reset scale if it was changed before */
+}
+
+/* Additional hover effect for the hide icon itself when visible */
+figure:hover .hide-icon:hover {
+    transform: scale(1.2); /* Enhanced scaling on hover when visible */
+}
+
+/* Styles for the share icon */
+.share-icon {
+    position: absolute;
+    top: 10px;  /* Position it near the top */
+    right: 10px;  /* Position it near the right */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0.5; /* Set the initial opacity to 50% */
+    pointer-events: none; /* Icon is uninteractable by default */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+    border: none; /* Remove any border */
+    padding: 0; /* Remove any padding */
+    background: none; /* Ensure no background is interfering */
+    display: block; /* Ensure it's displayed correctly without extra artifacts */
+}
+
+/* Display the share icon when hovering over the figure */
+figure:hover .share-icon {
+    opacity: 0.7; /* Slightly increase opacity when the figure is hovered */
+    pointer-events: auto; /* Icon becomes interactable when visible */
+    transform: scale(1); /* Reset scale if it was changed before */
+    text-decoration: none; /* Ensure no underline or decoration */
+}
+
+/* Additional hover effect for the share icon itself when visible */
+figure:hover .share-icon:hover {
+    transform: scale(1.2); /* Enhanced scaling on hover when visible */
+    opacity: 1; /* Full opacity on hover */
+    text-decoration: none; /* Ensure no underline or decoration */
 }
