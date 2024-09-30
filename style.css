@@ -1,69 +1,188 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body> 
-    <main>
-      <header class="header">
-        <img src="Images/Logo.png" alt="Bird Nest Logo" class="logo">
-        <h1 class="site-title">ImageNest</h1>
-      </header>
+/* Styles for the container holding all photos */
+.Photos {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  gap: 50px;
+  margin-bottom: 3px;
+  transition: all 0.5s ease; /* Add a smooth transition to the container */
+}
 
-      <div class="Photos">
-        <figure>
-          <a href="https://commons.wikimedia.org/wiki/File:A_fast_car_%2812345867183%29.jpg">
-            <img src="Images/Car Race.jpg" alt="A car race in action on a track">
-          </a>
-          <figcaption>A car race in action on a track<br> - <br> Uploaded by Brother George</figcaption>
-          <img src="Designing/Heart - No Like.png" alt="Like Icon" class="like-icon" data-liked="false">
-          <img src="Designing/Eye - Hide.png" alt="Hide Icon" class="hide-icon">
-          <img src="Designing/share button.png" alt="Share Icon" class="share-icon">
-        </figure>
+/* Styles for each figure (Polaroid) */
+figure {
+  position: relative; /* Add this to keep share icons inside their figures */
+  width: 350px;
+  height: 450px;
+  margin: 0;
+  background: white;
+  padding: 10px 10px 10px;
+  box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, all 0.5s ease;
+}
 
-        <figure>
-          <a href="https://www.google.com/imgres?q=raining&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F4d%2FRaining_street.jpg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ARaining_street.jpg">
-            <img src="Images/Raining Street.jpg" alt="A street view during a rainy day">
-          </a>
-          <figcaption>A street view during a rainy day<br> - <br>Uploaded by Mom</figcaption>
-          <img src="Designing/Heart - No Like.png" alt="Like Icon" class="like-icon" data-liked="false">
-          <img src="Designing/Eye - Hide.png" alt="Hide Icon" class="hide-icon">
-          <img src="Designing/share button.png" alt="Share Icon" class="share-icon">
-        </figure>
+/* Hover effect for the entire Polaroid */
+figure:hover {
+  transform: scale(1.1); /* Scale up the Polaroid on hover */
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
 
-        <figure>
-          <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AComet_Hyakutake_by_Bill_Ingalls.jpg">
-            <img src="Images/Comet Hyakutake.jpg" alt="A comet streaking across the night sky">
-          </a>
-          <figcaption>A comet streaking across the night sky<br> - <br> uploaded by Uncle Rob</figcaption>
-          <img src="Designing/Heart - No Like.png" alt="Like Icon" class="like-icon" data-liked="false">
-          <img src="Designing/Eye - Hide.png" alt="Hide Icon" class="hide-icon">
-          <img src="Designing/share button.png" alt="Share Icon" class="share-icon">
-        </figure>
-      </div>
+/* Styles for images inside the figures */
+figure img{
+  width: 350px;
+  height: 350px;
+  object-fit: cover; 
+  border-bottom: 10px solid white; /* Space between the image and caption */
+  
+}
 
-      <div class="links">
-        <footer>
-          <p>Contact me at kevin@nestco.com</p>
-          <p>Follow us on Instagram</p>
-          <p>Follow us on X</p>
-        </footer>
-        <p>&#169; 2024 ImageNest. All rights reserved.</p>
-      </div>
+/* Styles for captions */
+figcaption {
+  margin-top: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: #333;
+}
 
-      <!-- Feedback Form -->
-      <div class="feedback-form" id="feedbackForm">
-        <select id="feedbackType">
-          <option value="general">General Feedback</option>
-          <option value="enhancement">App Enhancement</option>
-          <option value="comment">General Comment</option>
-        </select>
-        <textarea placeholder="Enter your feedback here..."></textarea>
-        <button type="submit">Submit Feedback</button>
-      </div>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="script.js"></script>
-  </body>
-</html>
+/* Styles for the header containing the logo and title */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 3px solid #ddd;
+}
+
+/* Styles for the logo image */
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+
+/* Styles for the site title */
+.site-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #8d6309;
+  margin: 0;
+}
+
+
+
+.links {
+  text-align: center;
+}
+
+.like-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0; /* Icon is hidden by default */
+  pointer-events: none; /* Icon is uninteractable by default */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the entire Polaroid */
+figure:hover .like-icon {
+  opacity: 1; /* Icon becomes visible when the figure is hovered */
+  pointer-events: auto; /* Icon becomes interactable when visible */
+  transform: scale(1); /* Reset scale if it was changed before */
+}
+
+/* Additional hover effect for the icon itself when visible */
+figure:hover .like-icon:hover {
+  transform: scale(1.2); /* Enhanced scaling on hover when visible */
+}
+
+/* Styles for the feedback form */
+.feedback-form {
+  display: none;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.feedback-form select {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.feedback-form textarea {
+  padding: 10px;
+  height: 100px;
+}
+
+.feedback-form button {
+  padding: 10px 20px;
+  background-color: #8d6309;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.feedback-form button:hover {
+  background-color: #6c4c07;
+}
+
+/* Styles for the hide icon (eye icon) */
+.hide-icon {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0; /* Icon is hidden by default */
+  pointer-events: none; /* Icon is uninteractable by default */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Display the hide icon when hovering over the figure */
+figure:hover .hide-icon {
+  opacity: 1; /* Icon becomes visible when the figure is hovered */
+  pointer-events: auto; /* Icon becomes interactable when visible */
+  transform: scale(1); /* Reset scale if it was changed before */
+}
+
+/* Additional hover effect for the hide icon itself when visible */
+figure:hover .hide-icon:hover {
+  transform: scale(1.2); /* Enhanced scaling on hover when visible */
+}
+
+/* Styles for the share icon */
+.share-icon {
+  position: absolute;
+  top: 10px;  
+  right: 10px; 
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0.5; 
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  border: none;
+  padding: 0;
+  background: none;
+  display: block;
+}
+
+/* Display the share icon when hovering over the figure */
+figure:hover .share-icon {
+  opacity: 0.7; /* Slightly increase opacity when the figure is hovered */
+  pointer-events: auto; /* Icon becomes interactable when visible */
+  transform: scale(1); /* Reset scale if it was changed before */
+  text-decoration: none; /* Ensure no underline or decoration */
+}
+
+/* Additional hover effect for the share icon itself when visible */
+figure:hover .share-icon:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  text-decoration: none;
+}
