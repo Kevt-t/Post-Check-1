@@ -5,51 +5,65 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body> 
-  </body> 
-      <!----------Holds the Projects Lists---------------> 
-    <!--Following Pertains to Website Branding-->
-      <main>
+    <main>
       <header class="header">
         <img src="Images/Logo.png" alt="Bird Nest Logo" class="logo">
         <h1 class="site-title">ImageNest</h1>
-    </header>
-    <!--Organizes the Photos into one div-->
-    <!--IMG 1-->
+      </header>
+
       <div class="Photos">
         <figure>
           <a href="https://commons.wikimedia.org/wiki/File:A_fast_car_%2812345867183%29.jpg">
-              <img src="Images/Car Race.jpg" alt="A car race in action on a track">
+            <img src="Images/Car Race.jpg" alt="A car race in action on a track">
           </a>
           <figcaption>A car race in action on a track<br> - <br> Uploaded by Brother George</figcaption>
-      </figure>
-    <!--IMG 2-->
-      <figure>
-          <a href="https://www.google.com/imgres?q=raining&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F4d%2FRaining_street.jpg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ARaining_street.jpg&docid=K4UbxW3d0X2N4M&tbnid=-nMQFaN21ZOdgM&vet=12ahUKEwjykpyQzr2IAxXkCnkGHQbQF5UQM3oECFgQAA..i&w=4270&h=2530&hcb=2&itg=1&ved=2ahUKEwjykpyQzr2IAxXkCnkGHQbQF5UQM3oECFgQAA">
-              <img src="Images/Raining Street.jpg" alt="A street view during a rainy day">
+          <img src="Designing/Heart - No Like.png" alt="Like Icon" class="like-icon" data-liked="false">
+          <img src="Designing/Eye - Hide.png" alt="Hide Icon" class="hide-icon">
+          <img src="Designing/share button.png" alt="Share Icon" class="share-icon">
+        </figure>
+
+        <figure>
+          <a href="https://www.google.com/imgres?q=raining&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F4d%2FRaining_street.jpg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ARaining_street.jpg">
+            <img src="Images/Raining Street.jpg" alt="A street view during a rainy day">
           </a>
           <figcaption>A street view during a rainy day<br> - <br>Uploaded by Mom</figcaption>
-      </figure>
-    <!--IMG 3-->
-      <figure>
-          <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AComet_Hyakutake_by_Bill_Ingalls.jpg&psig=AOvVaw0rprb4MWt7ElPpaf8bByQu&ust=1726237578205000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjC5p7OvYgDFQAAAAAdAAAAABAE">
-              <img src="Images/Comet Hyakutake.jpg" alt="A comet streaking across the night sky">
-          </a>
-          <figcaption>A comet streaking across the night sky <br> - <br> uploaded by Uncle Rob</figcaption>
-      </figure>
-              </div>
-              <!--Holds links for Future Development-->
-              <div class="links">
-              <footer>
-                <p>Contact me at kevin@nestco.com</p>
-              </footer>
-              <footer>
-                <p>Follow us on Instagram</p>
-              </footer>
-              <footer>
-                <p>Follow us on X</p>
-              </footer>
-              <P>&#169 2024   ImageNest. All rights reserved </P>
-            </div>
+          <img src="Designing/Heart - No Like.png" alt="Like Icon" class="like-icon" data-liked="false">
+          <img src="Designing/Eye - Hide.png" alt="Hide Icon" class="hide-icon">
+          <img src="Designing/share button.png" alt="Share Icon" class="share-icon">
+        </figure>
 
-          </main>
-  </html>
+        <figure>
+          <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AComet_Hyakutake_by_Bill_Ingalls.jpg">
+            <img src="Images/Comet Hyakutake.jpg" alt="A comet streaking across the night sky">
+          </a>
+          <figcaption>A comet streaking across the night sky<br> - <br> uploaded by Uncle Rob</figcaption>
+          <img src="Designing/Heart - No Like.png" alt="Like Icon" class="like-icon" data-liked="false">
+          <img src="Designing/Eye - Hide.png" alt="Hide Icon" class="hide-icon">
+          <img src="Designing/share button.png" alt="Share Icon" class="share-icon">
+        </figure>
+      </div>
+
+      <div class="links">
+        <footer>
+          <p>Contact me at kevin@nestco.com</p>
+          <p>Follow us on Instagram</p>
+          <p>Follow us on X</p>
+        </footer>
+        <p>&#169; 2024 ImageNest. All rights reserved.</p>
+      </div>
+
+      <!-- Feedback Form -->
+      <div class="feedback-form" id="feedbackForm">
+        <select id="feedbackType">
+          <option value="general">General Feedback</option>
+          <option value="enhancement">App Enhancement</option>
+          <option value="comment">General Comment</option>
+        </select>
+        <textarea placeholder="Enter your feedback here..."></textarea>
+        <button type="submit">Submit Feedback</button>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
