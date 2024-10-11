@@ -1,24 +1,26 @@
 /* Styles for the container holding all photos */
+/* Styles for the container holding all photos */
 .Photos {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    gap: 50px;
-    margin-bottom: 3px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust grid for dynamic columns */
+    grid-gap: 50px;
+    justify-content: space-evenly; /* Ensure even spacing between items */
+    align-items: start; /* Align the grid items to the top */
+    width: 100%; /* Ensure the grid takes up the full width of the container */
+    padding: 20px 0; /* Add some padding to give space around the images */
+    box-sizing: border-box; /* Make sure the padding doesn't affect the width */
+    margin: 0 auto; /* Center the grid container itself */
     transition: all 0.5s ease; /* Add a smooth transition to the container */
 }
 
 /* Styles for each figure (Polaroid) */
 figure {
-    position: relative; /* Add this to keep share icons inside their figures */
+    position: relative; /* Keep share icons inside their figures */
     width: 350px;
     height: 450px;
-    margin: 0;
+    margin: 0 auto; /* Center each Polaroid */
     background: white;
-    padding: 10px 10px 10px;
+    padding: 10px;
     box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, all 0.5s ease;
@@ -36,7 +38,6 @@ figure img{
     height: 350px;
     object-fit: cover; 
     border-bottom: 10px solid white; /* Space between the image and caption */
-    
 }
 
 /* Styles for captions */
@@ -71,12 +72,11 @@ figcaption {
     margin: 0;
 }
 
-
-
 .links {
     text-align: center;
 }
 
+/* Styles for the like icon */
 .like-icon {
     position: absolute;
     bottom: 20px;
@@ -101,36 +101,7 @@ figure:hover .like-icon:hover {
     transform: scale(1.2); /* Enhanced scaling on hover when visible */
 }
 
-/* Styles for the feedback form */
-.feedback-form {
-    display: none;
-    flex-direction: column;
-    margin: 20px;
-}
-
-.feedback-form select {
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.feedback-form textarea {
-    padding: 10px;
-    height: 100px;
-}
-
-.feedback-form button {
-    padding: 10px 20px;
-    background-color: #8d6309;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.feedback-form button:hover {
-    background-color: #6c4c07;
-}
-
-/* Styles for the hide icon (eye icon) */
+/* Styles for the hide icon */
 .hide-icon {
     position: absolute;
     bottom: 20px;
@@ -185,4 +156,33 @@ figure:hover .share-icon:hover {
     transform: scale(1.2);
     opacity: 1;
     text-decoration: none;
+}
+
+/* Styles for the feedback form */
+.feedback-form {
+    display: none;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.feedback-form select {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.feedback-form textarea {
+    padding: 10px;
+    height: 100px;
+}
+
+.feedback-form button {
+    padding: 10px 20px;
+    background-color: #8d6309;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #6c4c07;
 }
